@@ -15,10 +15,6 @@ namespace PayrollGUI
         public FormPrincipal()
         {
             InitializeComponent();
-        }
-
-        private void btnInicio_Click(object sender, EventArgs e)
-        {
             abrirFormulario(new FormInicio());
         }
 
@@ -33,10 +29,19 @@ namespace PayrollGUI
             this.pnlVista.Tag = formulario;
             formulario.Show();
         }
-
-        private void btnPersonas_Click(object sender, EventArgs e)
+        public void seleccionarBoton(Bunifu.Framework.UI.BunifuFlatButton sender)
         {
-            abrirFormulario(new FormPersonas());
+            btnInicio.Textcolor = Color.White;
+            btnNomina.Textcolor = Color.White;
+            btnPersonas.Textcolor = Color.White;
+            btnReportes.Textcolor = Color.White;
+            btnEmpresa.Textcolor = Color.White;
+            btnAjustes.Textcolor = Color.White;
+            sender.selected = true;
+            if (sender.selected)
+            {
+                sender.Activecolor = Color.Indigo;
+            }
         }
 
         private void pictureLogo_Click(object sender, EventArgs e)
@@ -44,29 +49,50 @@ namespace PayrollGUI
 
         }
 
-        private void btnEmpresa_Click(object sender, EventArgs e)
+        private void pnlVista_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnInicio_Click_1(object sender, EventArgs e)
+        {
+            abrirFormulario(new FormInicio());
+            seleccionarBoton((Bunifu.Framework.UI.BunifuFlatButton) sender);
+        }
+
+        private void btnNomina_Click_1(object sender, EventArgs e)
+        {
+            abrirFormulario(new FormNomina());
+            seleccionarBoton((Bunifu.Framework.UI.BunifuFlatButton)sender);
+        }
+
+        private void btnPersonas_Click_1(object sender, EventArgs e)
+        {
+            abrirFormulario(new FormPersonas());
+            seleccionarBoton((Bunifu.Framework.UI.BunifuFlatButton)sender);
+        }
+
+        private void pictureBoxSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private void btnReportes_Click(object sender, EventArgs e)
         {
-
+            abrirFormulario(new FormReportes());
+            seleccionarBoton((Bunifu.Framework.UI.BunifuFlatButton)sender);
         }
 
-        private void btnConfiguracion_Click(object sender, EventArgs e)
+        private void btnEmpresa_Click(object sender, EventArgs e)
         {
-
+            abrirFormulario(new FormEmpresa());
+            seleccionarBoton((Bunifu.Framework.UI.BunifuFlatButton)sender);
         }
 
-        private void btnNomina_Click(object sender, EventArgs e)
+        private void btnAjustes_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void pnlVista_Paint(object sender, PaintEventArgs e)
-        {
-
+            abrirFormulario(new FormAjustes());
+            seleccionarBoton((Bunifu.Framework.UI.BunifuFlatButton)sender);
         }
     }
 }
