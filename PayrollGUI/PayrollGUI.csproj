@@ -38,6 +38,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -67,6 +68,12 @@
     </Compile>
     <Compile Include="FormInicio.Designer.cs">
       <DependentUpon>FormInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLiquidarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLiquidarEmpleado.Designer.cs">
+      <DependentUpon>FormLiquidarEmpleado.cs</DependentUpon>
     </Compile>
     <Compile Include="FormNomina.cs">
       <SubType>Form</SubType>
@@ -102,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormInicio.resx">
       <DependentUpon>FormInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLiquidarEmpleado.resx">
+      <DependentUpon>FormLiquidarEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormNomina.resx">
       <DependentUpon>FormNomina.cs</DependentUpon>

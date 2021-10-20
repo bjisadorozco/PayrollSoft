@@ -57,7 +57,7 @@ namespace PayrollGUI
         private void btnInicio_Click_1(object sender, EventArgs e)
         {
             abrirFormulario(new FormInicio());
-            seleccionarBoton((Bunifu.Framework.UI.BunifuFlatButton) sender);
+            seleccionarBoton((Bunifu.Framework.UI.BunifuFlatButton)sender);
         }
 
         private void btnNomina_Click_1(object sender, EventArgs e)
@@ -93,6 +93,22 @@ namespace PayrollGUI
         {
             abrirFormulario(new FormAjustes());
             seleccionarBoton((Bunifu.Framework.UI.BunifuFlatButton)sender);
+        }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            if (pnlApartados.Width == 164)
+            {
+                pnlApartados.Width = 46;
+                pictureLogo.Visible = false;              
+
+            }
+            else
+            {
+                pnlApartados.Width = 164;
+                pictureLogo.Visible = true;
+
+            }
         }
     }
 }
